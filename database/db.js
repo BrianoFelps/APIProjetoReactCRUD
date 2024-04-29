@@ -5,14 +5,14 @@ export const db = mysql.createConnection({
     port: 3306,
     user: "root",
     password: "admin",
-    database: "db_exemplo"
-});
+    database: "ProjetoIntegradorWEB"
+})
 
-db.connect((err) =>{
+db.connect((err) => {
     if(err){
-        console.log(`Erro de conexão ao BD: ${err}`);
+        console.log(`Erro de conexão ao banco de dados: ${err}`);
         return;
     }
 
     console.log(`Conexão bem-sucedida!`)
-});
+})

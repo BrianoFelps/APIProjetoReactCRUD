@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import userRoutes from './routes/Prods.js';
+import pagesRoutes from './routes/pages.js';
 
 const app = express();
 
@@ -9,11 +9,8 @@ app.use(express.json());
 app.use(cors());
 
 // Definindo rotas para o servidor, aqui se cria a rota chamada "/users"
-app.use("/prods", userRoutes);
+app.use("/pages", pagesRoutes);
 
-// portas da url
-// process.env vai ser criado, para configurar o projeto com constantes "||" expressa que
-// a porta seria 8080
 const port = process.env.PORT || 8080
 
 app.listen(port, () => {
